@@ -1,0 +1,18 @@
+<html>
+<head>
+
+</head>
+<body>
+    <form action="/">
+        <label>Kubeconfig Path</label>
+        <input name="path" value="{{.path}}">
+        <label>Context</label>
+        <input name="context" value="{{.context}}">
+        <button>View Pods</button>
+    </form>
+    <div>
+        <h3>{{.error}}</h3>
+        <ol>{{str2html .pods}}</ol>
+    </div>
+</body>
+</html>
